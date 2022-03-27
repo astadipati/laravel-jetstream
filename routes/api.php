@@ -29,6 +29,8 @@ Route::group(['middleware' => 'auth:sanctum'],function(){
     Route::get('/delete/{id}',[FormController::class, 'delete']); //delete
     // multiple relation 
     Route::post('/create-score-student',[ScoreController::class, 'create']);
+    Route::get('/data-student/{id}',[ScoreController::class, 'getStudent']); //get student by id
+    Route::post('/data-student/{id}',[ScoreController::class, 'update']); //get student by id
 
     Route::get('/logout',[AuthController::class, 'logout']);
 });

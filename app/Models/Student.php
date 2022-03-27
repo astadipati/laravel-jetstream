@@ -13,4 +13,9 @@ class Student extends Model
         'alamat',
         'no_telp'
     ];
+
+    public function score(){
+        // one to many fk student_id akn di join di controller
+        return $this->hasMany('App\Models\Score','student_id'); 
+    }
 }
