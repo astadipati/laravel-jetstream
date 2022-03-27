@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\FormController;
+use App\Http\Controllers\API\ScoreController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,11 +20,16 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:sanctum')->get('/form',[FormController::class,'index'], function (Request $request) {
     // return $request->user();
 // });
+
 Route::group(['middleware' => 'auth:sanctum'],function(){
+    // crud student
     Route::post('/create',[FormController::class, 'create']);
     Route::get('/edit/{id}',[FormController::class, 'edit']); // show detil
     Route::post('/edit/{id}',[FormController::class, 'update']); //update detil
     Route::get('/delete/{id}',[FormController::class, 'delete']); //delete
+    // multiple relation 
+    Route::post('/create-score-student',[ScoreController::class, 'create']);
+
     Route::get('/logout',[AuthController::class, 'logout']);
 });
 
