@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::group(['middleware' => 'auth:sanctum'],function(){
     Route::post('/create',[FormController::class, 'create']);
+    Route::get('/edit/{id}',[FormController::class, 'edit']); // show detil
+    Route::post('/edit/{id}',[FormController::class, 'update']); //update detil
+    Route::get('/delete/{id}',[FormController::class, 'delete']); //delete
     Route::get('/logout',[AuthController::class, 'logout']);
 });
 
