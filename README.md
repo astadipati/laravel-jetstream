@@ -44,4 +44,6 @@ cara pakainya di postman https://prnt.sc/LyVqr5DLRgaI
 
 ### 09 Resource Collection
 lebih simpel dan rapih baik dipakai untuk get satu data maupun data paginate
+kalau ambil satu data cukup new
+tapi kalau ambil data banyak pakai collection
 

@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class StudentResource extends JsonResource
+class ScoreResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,10 +15,10 @@ class StudentResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'=>$this->id,
-            'nama'=>$this->nama,
-            // kita relasikan hasMany
-            'score'=>ScoreResource::collection($this->score) //get score ini dari eloquent student
+            'id' => $this->id,
+            'student_id' => $this->student_id,
+            'mapel'=>$this->mapel,
+            'nilai'=>$this->nilai
         ];
     }
 }
