@@ -1,9 +1,9 @@
 ## Laravel Jetstream & Sanctum
-01 Initial, generate token & test login
-02 Penggunaan token, login, akses route dengan token, logout/hapus token
-03 Post data & validate sebelum save, Edit post & delete post
-04 Merger dengan no 03
-05 Input multiple data
+### 01 Initial, generate token & test login
+### 02 Penggunaan token, login, akses route dengan token, logout/hapus token
+### 03 Post data & validate sebelum save, Edit post & delete post
+### 04 Merger dengan no 03
+### 05 Input multiple data
 {
     "nama": "Jordi",
     "alamat": "Tuban",
@@ -19,7 +19,7 @@
         }
     ]
 }
-06 Update multiple data, delete dulu datanya baru create ulang
+### 06 Update multiple data, delete dulu datanya baru create ulang
 {
     "nama": "Jordi update",
     "alamat": "Tuban Jatim",
@@ -39,4 +39,5 @@
         }
     ]
 }
+### 07 Pagination
 

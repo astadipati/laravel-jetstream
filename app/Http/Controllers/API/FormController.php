@@ -59,7 +59,6 @@ class FormController extends Controller
             'message' => 'Data Updated',
             'data'=>$student
             ], 200);
-            
         }
         
         public function delete($id){
@@ -69,5 +68,18 @@ class FormController extends Controller
             return response()->json([
                 'message' => 'Data Berhasil dihapus',
                 ], 200);
+    }
+
+    public function show(Request $request){
+        // menampilkan seluruh data siswa dalam paginate
+        $perPage = $request->get('per_page'); //per_page disini dari params postman
+
+        // $students = Student::get();
+        $students = Student::paginate($perPage);
+
+        return response()->json([
+            'message' => 'data siswa',
+            'data'=>$students
+        ]);
     }
 }
