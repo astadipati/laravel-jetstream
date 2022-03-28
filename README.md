@@ -40,4 +40,8 @@
     ]
 }
 ### 07 Pagination
+cara pakainya di postman https://prnt.sc/LyVqr5DLRgaI
+
+### 09 Resource Collection
+lebih simpel dan rapih baik dipakai untuk get satu data maupun data paginate
 
