@@ -33,7 +33,7 @@ class FormController extends Controller
     public function edit($id){
         $student = Student::find($id);
         // dd($student);
-        $studentCollection = new StudentResource($student);
+        $studentCollection = new StudentResource($student); //jika single
         return response()->json([
             'message' => 'Data Student',
             // 'data'=>$student
