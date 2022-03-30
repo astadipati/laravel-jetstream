@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\FormController;
 use App\Http\Controllers\API\ScoreController;
+use App\Http\Controllers\API\UploadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,5 @@ Route::group(['middleware' => 'auth:sanctum'],function(){
 });
 
 Route::post('/login',[AuthController::class,'login']);
+// upload gambar
+Route::post('/upload',[UploadController::class,'upload']); 
